@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import random
 from collections import defaultdict
+import webbrowser
 
 API_KEY = 'AIzaSyDrx4GgcWXJpXuLp_H2uDtJ53hb82KCbTs'
 
@@ -60,7 +61,7 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
 
     def crear_individuo(hotel, habitacion):
         distancia = calcular_distancia(punto_interes_coord, hotel)
-        return [hotel['HotelID'], hotel['Nombre'], habitacion['HabitacionID'], habitacion['Precio'], distancia, hotel['Valoracion'], habitacion['TipoServicio'], habitacion['TipoCama']]
+        return [hotel['HotelID'], hotel['Nombre'], habitacion['HabitacionID'], habitacion['Precio'], distancia, hotel['Valoracion'], habitacion['TipoServicio'], habitacion['TipoCama'], hotel['Lat'], hotel['Lng']]
 
     def evaluar_individuo(individuo):
         precio, distancia, valoracion, tipo_servicio, tipo_cama = individuo[3:8]
@@ -130,9 +131,13 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
         if mejor_habitacion:
             mejores_habitaciones.append(mejor_habitacion)
 
-    return [dict(zip(columnas, habitacion)) for habitacion in mejores_habitaciones], []
+    return [dict(zip(columnas + ['Lat', 'Lng'], habitacion)) for habitacion in mejores_habitaciones], []
 
-def mostrar_resultado_tabla(mejores_habitaciones):
+def mostrar_ruta_google_maps(lat_origen, lng_origen, lat_destino, lng_destino):
+    url = f"https://www.google.com/maps/dir/{lat_origen},{lng_origen}/{lat_destino},{lng_destino}"
+    webbrowser.open(url)
+
+def mostrar_resultado_tabla(mejores_habitaciones, punto_interes_coord):
     ventana_resultados = tk.Toplevel(root)
     ventana_resultados.title("Resultados de la Optimización")
 
@@ -151,6 +156,11 @@ def mostrar_resultado_tabla(mejores_habitaciones):
 
     tabla.pack(fill=tk.BOTH, expand=True)
 
+    for habitacion in mejores_habitaciones:
+        button = tk.Button(ventana_resultados, text=f"Ver Ruta a {habitacion['Nombre']}", 
+                           command=lambda hab=habitacion: mostrar_ruta_google_maps(punto_interes_coord[0], punto_interes_coord[1], hab['Lat'], hab['Lng']))
+        button.pack(pady=5)
+
 def buscar():
     ciudad = ciudad_var.get()
     punto_interes = punto_interes_var.get()
@@ -164,7 +174,6 @@ def buscar():
     tasa_mutacion_individuo = float(tasa_mutacion_individuo_var.get())
     tasa_mutacion_gen = float(tasa_mutacion_gen_var.get())
 
-    # Si no se seleccionan tipos de cama o servicio, asignar valores predeterminados
     if not tipo_cama:
         tipo_cama = ["Habitación con una cama", "Habitación con cama doble", "Habitación con cama matrimonial"]
     if not tipo_servicio:
@@ -196,7 +205,7 @@ def buscar():
 
     mejores_habitaciones, historial_errores = algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos)
     if mejores_habitaciones:
-        mostrar_resultado_tabla(mejores_habitaciones)
+        mostrar_resultado_tabla(mejores_habitaciones, punto_interes_coord)
     else:
         messagebox.showerror("Error", "No se encontraron habitaciones adecuadas.")
 
