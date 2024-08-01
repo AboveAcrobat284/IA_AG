@@ -6,6 +6,7 @@ import numpy as np
 import random
 from collections import defaultdict
 import webbrowser
+import matplotlib.pyplot as plt
 
 API_KEY = 'AIzaSyDrx4GgcWXJpXuLp_H2uDtJ53hb82KCbTs'
 
@@ -111,6 +112,36 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
             poblacion_podada = poblacion_unica
         return poblacion_podada
 
+    # Inicializar población
+    poblacion = []
+    for _ in range(tamano_poblacion):
+        hotel = df_hoteles.sample().iloc[0]
+        habitacion = df_habitaciones[df_habitaciones['HotelID'] == hotel['HotelID']].sample().iloc[0]
+        poblacion.append(crear_individuo(hotel, habitacion))
+
+    mejores_aptitudes = []
+    peores_aptitudes = []
+    promedios_aptitudes = []
+
+    for generacion in range(num_generaciones):
+        errores = [evaluar_individuo(individuo) for individuo in poblacion]
+        mejor_aptitud = min(errores)
+        peor_aptitud = max(errores)
+        promedio_aptitud = np.mean(errores)
+
+        mejores_aptitudes.append(mejor_aptitud)
+        peores_aptitudes.append(peor_aptitud)
+        promedios_aptitudes.append(promedio_aptitud)
+
+        parejas = seleccionar_parejas(poblacion, errores)
+        nueva_poblacion = []
+        for padre1, padre2 in parejas:
+            hijo1, hijo2 = cruzar(padre1, padre2)
+            nueva_poblacion.append(mutar(hijo1))
+            nueva_poblacion.append(mutar(hijo2))
+
+        poblacion = podar_poblacion(nueva_poblacion, max_tamano_poblacion)
+
     df_hoteles['Distancia'] = df_hoteles.apply(lambda x: calcular_distancia(punto_interes_coord, x), axis=1)
     mejores_hoteles = df_hoteles.sort_values(by=['Distancia', 'Valoracion'], ascending=[True, False]).drop_duplicates(subset=['HotelID']).head(5)
     mejores_habitaciones = []
@@ -131,7 +162,19 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
         if mejor_habitacion:
             mejores_habitaciones.append(mejor_habitacion)
 
-    return [dict(zip(columnas + ['Lat', 'Lng'], habitacion)) for habitacion in mejores_habitaciones], []
+    return [dict(zip(columnas + ['Lat', 'Lng'], habitacion)) for habitacion in mejores_habitaciones], (mejores_aptitudes, peores_aptitudes, promedios_aptitudes)
+
+def mostrar_grafica_aptitudes(mejores_aptitudes, peores_aptitudes, promedios_aptitudes):
+    plt.figure(figsize=(10, 6))
+    plt.plot(mejores_aptitudes, label='Mejor Aptitud')
+    plt.plot(peores_aptitudes, label='Peor Aptitud')
+    plt.plot(promedios_aptitudes, label='Aptitud Promedio')
+    plt.xlabel('Generaciones')
+    plt.ylabel('Aptitud')
+    plt.title('Evolución de las Aptitudes a lo Largo de las Generaciones')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 
 def mostrar_ruta_google_maps(lat_origen, lng_origen, lat_destino, lng_destino):
     url = f"https://www.google.com/maps/dir/{lat_origen},{lng_origen}/{lat_destino},{lng_destino}"
@@ -203,9 +246,10 @@ def buscar():
         'TasaMutacionGen': tasa_mutacion_gen
     }
 
-    mejores_habitaciones, historial_errores = algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos)
+    mejores_habitaciones, (mejores_aptitudes, peores_aptitudes, promedios_aptitudes) = algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos)
     if mejores_habitaciones:
         mostrar_resultado_tabla(mejores_habitaciones, punto_interes_coord)
+        mostrar_grafica_aptitudes(mejores_aptitudes, peores_aptitudes, promedios_aptitudes)
     else:
         messagebox.showerror("Error", "No se encontraron habitaciones adecuadas.")
 
