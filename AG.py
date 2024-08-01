@@ -6,10 +6,8 @@ import numpy as np
 import random
 from collections import defaultdict
 
-# API Key de Google
 API_KEY = 'AIzaSyDrx4GgcWXJpXuLp_H2uDtJ53hb82KCbTs'
 
-# Leer el dataset de hoteles
 def leer_dataset_hoteles():
     df = pd.read_csv('hoteles_existentes.csv')
     columnas_esperadas = ['HotelID', 'Ciudad', 'Nombre', 'Direccion', 'Valoracion', 'TotalOpiniones', 'Lat', 'Lng']
@@ -18,7 +16,6 @@ def leer_dataset_hoteles():
             raise KeyError(f"Falta la columna '{columna}' en el dataset de hoteles")
     return df
 
-# Leer el dataset de habitaciones
 def leer_dataset_habitaciones():
     df = pd.read_csv('habitaciones_existentes.csv')
     columnas_esperadas = ['HotelID', 'HabitacionID', 'Precio', 'TipoCama', 'TipoServicio']
@@ -27,7 +24,6 @@ def leer_dataset_habitaciones():
             raise KeyError(f"Falta la columna '{columna}' en el dataset de habitaciones")
     return df
 
-# Función para obtener coordenadas de una dirección
 def obtener_coordenadas(direccion):
     url = f"https://maps.googleapis.com/maps/api/geocode/json?address={direccion}&key={API_KEY}"
     response = requests.get(url)
@@ -36,13 +32,10 @@ def obtener_coordenadas(direccion):
         if results:
             location = results[0].get('geometry', {}).get('location', {})
             return location.get('lat'), location.get('lng')
-    print(f"Error {response.status_code}: No se pudieron obtener las coordenadas de {direccion}")
     return None, None
 
-# Caché para almacenar las distancias calculadas
 distancia_cache = defaultdict(lambda: None)
 
-# Función para calcular distancia usando Google Distance Matrix API
 def calcular_distancia(punto_interes, hotel):
     clave_cache = (punto_interes, (hotel['Lat'], hotel['Lng']))
     if distancia_cache[clave_cache] is None:
@@ -51,10 +44,9 @@ def calcular_distancia(punto_interes, hotel):
         if response.status_code == 200:
             distance_info = response.json().get('rows', [])[0].get('elements', [])[0].get('distance', {})
             if distance_info:
-                distancia_cache[clave_cache] = distance_info.get('value') / 1000  # convertir a km
+                distancia_cache[clave_cache] = distance_info.get('value') / 1000
     return distancia_cache[clave_cache]
 
-# Función del algoritmo genético
 def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
     tamano_poblacion = int(datos['TamanoPoblacion'])
     max_tamano_poblacion = int(datos['MaxTamanoPoblacion'])
@@ -63,32 +55,24 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
     tasa_mutacion_gen = float(datos['TasaMutacionGen'])
 
     columnas = ['HotelID', 'Nombre', 'HabitacionID', 'Precio', 'Distancia', 'Valoracion', 'TipoServicio', 'TipoCama']
-
-    # Orden de preferencia para camas y servicios
     preferencia_camas = ["Habitación con una cama", "Habitación con cama doble", "Habitación con cama matrimonial"]
     preferencia_servicios = ["Habitación con Frigobar", "Habitación con Jacuzzi", "Habitación con Spa"]
 
-    # Crear la población inicial de individuos
     def crear_individuo(hotel, habitacion):
         distancia = calcular_distancia(punto_interes_coord, hotel)
-        tipo_cama = habitacion['TipoCama'] if habitacion['TipoCama'] in datos['TipoCama'] else preferencia_camas[0]
-        tipo_servicio = habitacion['TipoServicio'] if habitacion['TipoServicio'] in datos['TipoServicio'] else preferencia_servicios[0]
-        return [hotel['HotelID'], hotel['Nombre'], habitacion['HabitacionID'], habitacion['Precio'], distancia, hotel['Valoracion'], tipo_servicio, tipo_cama]
+        return [hotel['HotelID'], hotel['Nombre'], habitacion['HabitacionID'], habitacion['Precio'], distancia, hotel['Valoracion'], habitacion['TipoServicio'], habitacion['TipoCama']]
 
     def evaluar_individuo(individuo):
-        if len(individuo) != 8:
-            raise ValueError(f"El individuo tiene una longitud incorrecta: {len(individuo)}")
         precio, distancia, valoracion, tipo_servicio, tipo_cama = individuo[3:8]
         error = (
             abs(precio - datos['CostoDeseado']) / datos['CostoDeseado'] +
             abs(distancia - datos['Distancia']) / datos['Distancia'] +
             abs(valoracion - datos['PuntajeDeseado']) / datos['PuntajeDeseado']
         )
-        # Penalizaciones
         if tipo_cama not in datos['TipoCama']:
-            error += 0.1  # Penalización leve por tipo de cama no preferido
+            error += 1
         if tipo_servicio not in datos['TipoServicio']:
-            error += 0.1  # Penalización leve por tipo de servicio no preferido
+            error += 1
         return error
 
     def seleccionar_parejas(poblacion, errores):
@@ -111,7 +95,6 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
                 gen if random.random() > tasa_mutacion_gen or col not in columnas_para_mutar else random.choice(df_habitaciones[col].unique())
                 for gen, col in zip(individuo, columnas)
             ]
-            # Asegurarse de que 'Distancia' y 'Valoracion' se mantengan sin cambios.
             individuo_mutado[4] = calcular_distancia(punto_interes_coord, df_hoteles[df_hoteles['HotelID'] == individuo_mutado[0]].iloc[0])
             individuo_mutado[5] = df_hoteles[df_hoteles['HotelID'] == individuo_mutado[0]].iloc[0]['Valoracion']
             return individuo_mutado
@@ -127,16 +110,15 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
             poblacion_podada = poblacion_unica
         return poblacion_podada
 
-    # Calcular la distancia a cada hotel
     df_hoteles['Distancia'] = df_hoteles.apply(lambda x: calcular_distancia(punto_interes_coord, x), axis=1)
-
-    # Seleccionar los 5 hoteles más cercanos y con mejor valoración, asegurando que sean distintos
     mejores_hoteles = df_hoteles.sort_values(by=['Distancia', 'Valoracion'], ascending=[True, False]).drop_duplicates(subset=['HotelID']).head(5)
-
-    # Buscar la mejor habitación en cada uno de los 5 mejores hoteles
     mejores_habitaciones = []
     for _, hotel in mejores_hoteles.iterrows():
-        habitaciones = df_habitaciones[df_habitaciones['HotelID'] == hotel['HotelID']]
+        habitaciones = df_habitaciones[
+            (df_habitaciones['HotelID'] == hotel['HotelID']) &
+            (df_habitaciones['TipoCama'].isin(datos['TipoCama'])) &
+            (df_habitaciones['TipoServicio'].isin(datos['TipoServicio']))
+        ]
         mejor_habitacion = None
         mejor_error = float('inf')
         for _, habitacion in habitaciones.iterrows():
@@ -150,7 +132,6 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
 
     return [dict(zip(columnas, habitacion)) for habitacion in mejores_habitaciones], []
 
-# Función para mostrar el resultado en una tabla
 def mostrar_resultado_tabla(mejores_habitaciones):
     ventana_resultados = tk.Toplevel(root)
     ventana_resultados.title("Resultados de la Optimización")
@@ -170,7 +151,6 @@ def mostrar_resultado_tabla(mejores_habitaciones):
 
     tabla.pack(fill=tk.BOTH, expand=True)
 
-# Función para manejar el botón de búsqueda
 def buscar():
     ciudad = ciudad_var.get()
     punto_interes = punto_interes_var.get()
@@ -184,10 +164,11 @@ def buscar():
     tasa_mutacion_individuo = float(tasa_mutacion_individuo_var.get())
     tasa_mutacion_gen = float(tasa_mutacion_gen_var.get())
 
+    # Si no se seleccionan tipos de cama o servicio, asignar valores predeterminados
     if not tipo_cama:
-        tipo_cama = ["Habitación con una cama"]
+        tipo_cama = ["Habitación con una cama", "Habitación con cama doble", "Habitación con cama matrimonial"]
     if not tipo_servicio:
-        tipo_servicio = ["Habitación con Frigobar"]
+        tipo_servicio = ["Habitación con Frigobar", "Habitación con Jacuzzi", "Habitación con Spa"]
 
     lat_punto_interes, lng_punto_interes = obtener_coordenadas(punto_interes)
     if not lat_punto_interes or not lng_punto_interes:
@@ -202,7 +183,7 @@ def buscar():
         'CostoDeseado': costo_deseado,
         'Lat': punto_interes_coord[0],
         'Lng': punto_interes_coord[1],
-        'Distancia': 10,  # Distancia inicial grande para optimizar
+        'Distancia': 10,
         'TipoCama': tipo_cama,
         'TipoServicio': tipo_servicio,
         'PuntajeDeseado': puntaje_deseado,
@@ -219,7 +200,6 @@ def buscar():
     else:
         messagebox.showerror("Error", "No se encontraron habitaciones adecuadas.")
 
-# Crear la interfaz gráfica
 root = tk.Tk()
 root.title("Buscador de Hoteles Cercanos con Algoritmo Genético")
 root.geometry("1000x800")
