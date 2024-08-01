@@ -60,9 +60,16 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
     preferencia_camas = ["Habitación con una cama", "Habitación con cama doble", "Habitación con cama matrimonial"]
     preferencia_servicios = ["Habitación con Frigobar", "Habitación con Jacuzzi", "Habitación con Spa"]
 
+    #Se toma un hotel y una habitación, se calcula la distancia del hotel al 
+    #punto de interés y se devuelve un individuo como una lista de valores 
+    #que representan las características del hotel y la habitación.
+
     def crear_individuo(hotel, habitacion):
         distancia = calcular_distancia(punto_interes_coord, hotel)
         return [hotel['HotelID'], hotel['Nombre'], habitacion['HabitacionID'], habitacion['Precio'], distancia, hotel['Valoracion'], habitacion['TipoServicio'], habitacion['TipoCama'], hotel['Lat'], hotel['Lng']]
+
+    #La función calcula un valor de error para un individuo basado en las diferencias entre sus características y las 
+    #preferencias del usuario. Cuanto menor sea el error, mejor será el individuo.
 
     def evaluar_individuo(individuo):
         precio, distancia, valoracion, tipo_servicio, tipo_cama = individuo[3:8]
@@ -77,6 +84,9 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
             error += 1
         return error
 
+    #Se seleccionan individuos de la población actual para formar parejas. Los individuos con menor error (mejor 
+    #aptitud) tienen mayor probabilidad de ser seleccionados.
+
     def seleccionar_parejas(poblacion, errores):
         seleccionados = random.choices(poblacion, weights=[1/e for e in errores], k=len(poblacion))
         if len(seleccionados) % 2 != 0:
@@ -84,11 +94,17 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
         parejas = [(seleccionados[i], seleccionados[i+1]) for i in range(0, len(seleccionados), 2)]
         return parejas
 
+    #Dos individuos (padres) se cruzan intercambiando partes d
+    #e su información genética para crear dos nuevos individuos (hijos).
+
     def cruzar(padre1, padre2):
         punto_cruce = random.randint(1, len(padre1) - 1)
         hijo1 = padre1[:punto_cruce] + padre2[punto_cruce:]
         hijo2 = padre2[:punto_cruce] + padre1[punto_cruce:]
         return hijo1, hijo2
+
+    #Un individuo puede mutar con una cierta probabilidad. Se seleccionan genes aleatorios 
+    #del individuo y se reemplazan con valores aleatorios de las mismas características.
 
     def mutar(individuo):
         if random.random() < tasa_mutacion_individuo:
@@ -101,6 +117,9 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
             individuo_mutado[5] = df_hoteles[df_hoteles['HotelID'] == individuo_mutado[0]].iloc[0]['Valoracion']
             return individuo_mutado
         return individuo
+    
+    #La población se reduce a un tamaño máximo eliminando duplicados 
+    #y manteniendo los individuos con mejor aptitud.
 
     def podar_poblacion(poblacion, max_tamano):
         poblacion_unica = list(set(map(tuple, poblacion)))
@@ -123,6 +142,15 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
     peores_aptitudes = []
     promedios_aptitudes = []
 
+    #La población se reduce a un tamaño máximo eliminando duplicados y manteniendo los individuos con mejor aptitud.
+
+    #En resumen, la aptitud (error) de cada individuo se calcula dinámicamente y se utiliza inmediatamente en los 
+    #procesos de selección, cruce, mutación y poda. Para el análisis y visualización del rendimiento del algoritmo a l
+    #o largo del tiempo, las mejores, peores y promedios de aptitudes se almacenan en listas.
+
+    # El error se calcula como la suma de las diferencias relativas entre las características del individuo y las preferencias
+    # del usuario. Si el tipo de cama o el tipo de servicio no coinciden con las preferencias, se añade una penalización al error.
+
     for generacion in range(num_generaciones):
         errores = [evaluar_individuo(individuo) for individuo in poblacion]
         mejor_aptitud = min(errores)
@@ -141,6 +169,7 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
             nueva_poblacion.append(mutar(hijo2))
 
         poblacion = podar_poblacion(nueva_poblacion, max_tamano_poblacion)
+        #----------------
 
     df_hoteles['Distancia'] = df_hoteles.apply(lambda x: calcular_distancia(punto_interes_coord, x), axis=1)
     mejores_hoteles = df_hoteles.sort_values(by=['Distancia', 'Valoracion'], ascending=[True, False]).drop_duplicates(subset=['HotelID']).head(5)
@@ -163,6 +192,9 @@ def algoritmo_genetico(punto_interes_coord, df_hoteles, df_habitaciones, datos):
             mejores_habitaciones.append(mejor_habitacion)
 
     return [dict(zip(columnas + ['Lat', 'Lng'], habitacion)) for habitacion in mejores_habitaciones], (mejores_aptitudes, peores_aptitudes, promedios_aptitudes)
+
+#Después de ejecutar todas las generaciones, se llama a la función mostrar_grafica_aptitudes para graficar los valores almacenados en las listas de aptitudes:
+#La función mostrar_grafica_aptitudes se llama al final de la ejecución del algoritmo genético, después de calcular y almacenar los valores de aptitud en cada generación
 
 def mostrar_grafica_aptitudes(mejores_aptitudes, peores_aptitudes, promedios_aptitudes):
     plt.figure(figsize=(10, 6))
