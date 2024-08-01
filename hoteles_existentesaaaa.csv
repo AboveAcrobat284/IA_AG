@@ -1,0 +1,61 @@
+HotelID,Ciudad,Nombre,Direccion,Valoracion,TotalOpiniones,Lat,Lng
+1,"Tuxtla Gutierrez, Chiapas",Hotel del Carmen [Tuxtla Gutiérrez],"Av 2a. Sur Pte No. 826, Centro, 29000 Tuxtla Gutiérrez, Chis.",4.3,1226,16.7526543,-93.1227145
+2,"Tuxtla Gutierrez, Chiapas",City Express Junior by Marriott Tuxtla Gutiérrez Poliforum,"Libramiento Norte Oriente 4350, Patria Nueva, Tuxtla Gutiérrez",4.2,1587,16.7503316,-93.0753866
+3,"Tuxtla Gutierrez, Chiapas",Hotel Plazha,"5a. Nte. Pte. 2478, Covadonga, 29030 Tuxtla Gutiérrez, Chis",4.2,399,16.7630991,-93.1397034
+4,"Tuxtla Gutierrez, Chiapas","Holiday Inn Express Tuxtla Gutierrez la Marimba, an IHG Hotel","Avenida Central Poniente 1254, Colonia Centro, Tuxtla Gutiérrez",4.5,1699,16.75528,-93.1261397
+5,"Tuxtla Gutierrez, Chiapas",Fiesta Inn Tuxtla Gutiérrez,"Av. Prolongación Anillo Circunvalación Sur 248, Santa Elena, Tuxtla Gutiérrez",4.5,2830,16.7750577,-93.1165427
+6,"San Cristobal De las Casas, Chiapas",Hotel Casa Mexicana,"Calle 28 de Agosto 1, Zona Centro, San Cristóbal de las Casas",4.4,713,16.7396241,-92.6370658
+7,"San Cristobal De las Casas, Chiapas",Docecuartos Hotel,"Benito Juárez 1-Interior A, Centro, San Cristóbal de las Casas",4.6,125,16.755536,-92.64387330000001
+8,"San Cristobal De las Casas, Chiapas",Mision Grand San Cristobal de las Casas,"Francisco I. Madero 19, Centro Historico, San Cristóbal de las Casas",4.5,490,16.7383357,-92.6343437
+9,"San Cristobal De las Casas, Chiapas",Casa Na Bolom,"Avenida Vicente Guerrero 33, Barrio del Cerrillo, San Cristóbal de las Casas",4.5,1854,16.7416564,-92.6299574
+10,"San Cristobal De las Casas, Chiapas",Hotel Ciudad Real Centro Histórico,"Luis Donaldo Colosio No. 10, Centro, San Cristóbal de las Casas",4.4,1048,16.7366104,-92.63745779999999
+11,"Arriaga, Chiapas",HOTEL IO,"1a. Sur 10, Los Laureles, Arriaga",3.8,215,16.2340644,-93.8997237
+12,"Arriaga, Chiapas","Casa del Migrante ""Hogar de la Misericordia""","Quinta Calle Sur 1420, San Jorge, Arriaga",3.7,57,16.2260244,-93.9035019
+13,"Arriaga, Chiapas",Hotel Parador,"Costera 4, Barbasco, Arriaga",3.8,218,16.2372594,-93.8832102
+14,"Arriaga, Chiapas",Aldea cruz blanca san juan sacatepequez Guatemala,"Aldea cruz blanca san juan sacatepequez Guatemala, Arriaga",0.0,0,16.2371846,-93.89862049999999
+15,"Arriaga, Chiapas",lena's bathroom,"lena's bathroom, Arriaga",0.0,0,16.2371846,-93.8986204
+16,"Tonalá, Chiapas",Hotel Central Parq,"21 de Marzo 108, Las Ánimas, Tonalá",3.5,121,16.0924863,-93.7525751
+17,"Tonalá, Chiapas",Hotel quetzal,"Avenida churubusco y calle, Juan José Calzada 15, Tonalá",4.4,307,16.0877639,-93.7689159
+18,"Tonalá, Chiapas",Hotel Villa del Mar,"Calle Francisco I. Madero 189, Tonalá",3.9,126,20.6204157,-103.2434028
+19,"Tonalá, Chiapas",Hotel Garden Suites Tonalá Chiapas,"Avenida Hidalgo 36, San Ramón, Tonalá",4.2,383,16.0869989,-93.7451356
+20,"Tonalá, Chiapas",Auto Hotel La Roca,"3, Nicolás Bravo, Nicatán, Tonalá",3.8,47,16.0861026,-93.7446858
+21,"San Cristobal De las Casas, Chiapas",Nuevo Hotel 21,"Dirección 21, San Cristobal De las Casas, Chiapas",4.5,422,16.7370359,-92.6376186
+22,"San Cristobal De las Casas, Chiapas",Nuevo Hotel 22,"Dirección 22, San Cristobal De las Casas, Chiapas",4.7,1675,16.7370359,-92.6376186
+23,"San Cristobal De las Casas, Chiapas",Nuevo Hotel 23,"Dirección 23, San Cristobal De las Casas, Chiapas",4.4,888,16.7370359,-92.6376186
+24,"San Cristobal De las Casas, Chiapas",Nuevo Hotel 24,"Dirección 24, San Cristobal De las Casas, Chiapas",3.8,1559,16.7370359,-92.6376186
+25,"San Cristobal De las Casas, Chiapas",Nuevo Hotel 25,"Dirección 25, San Cristobal De las Casas, Chiapas",4.1,963,16.7370359,-92.6376186
+26,"San Cristobal De las Casas, Chiapas",Nuevo Hotel 26,"Dirección 26, San Cristobal De las Casas, Chiapas",3.7,1101,16.7370359,-92.6376186
+27,"San Cristobal De las Casas, Chiapas",Nuevo Hotel 27,"Dirección 27, San Cristobal De las Casas, Chiapas",4.0,1873,16.7370359,-92.6376186
+28,"San Cristobal De las Casas, Chiapas",Nuevo Hotel 28,"Dirección 28, San Cristobal De las Casas, Chiapas",4.3,983,16.7370359,-92.6376186
+29,"San Cristobal De las Casas, Chiapas",Nuevo Hotel 29,"Dirección 29, San Cristobal De las Casas, Chiapas",4.0,1091,16.7370359,-92.6376186
+30,"San Cristobal De las Casas, Chiapas",Nuevo Hotel 30,"Dirección 30, San Cristobal De las Casas, Chiapas",4.4,1500,16.7370359,-92.6376186
+31,"Arriaga, Chiapas",Nuevo Hotel 31,"Dirección 31, Arriaga, Chiapas",4.6,1070,16.2371385,-93.8986279
+32,"Arriaga, Chiapas",Nuevo Hotel 32,"Dirección 32, Arriaga, Chiapas",4.0,324,16.2371385,-93.8986279
+33,"Arriaga, Chiapas",Nuevo Hotel 33,"Dirección 33, Arriaga, Chiapas",3.2,404,16.2371385,-93.8986279
+34,"Arriaga, Chiapas",Nuevo Hotel 34,"Dirección 34, Arriaga, Chiapas",4.1,386,16.2371385,-93.8986279
+35,"Arriaga, Chiapas",Nuevo Hotel 35,"Dirección 35, Arriaga, Chiapas",4.5,674,16.2371385,-93.8986279
+36,"Arriaga, Chiapas",Nuevo Hotel 36,"Dirección 36, Arriaga, Chiapas",4.0,1643,16.2371385,-93.8986279
+37,"Arriaga, Chiapas",Nuevo Hotel 37,"Dirección 37, Arriaga, Chiapas",4.8,1138,16.2371385,-93.8986279
+38,"Arriaga, Chiapas",Nuevo Hotel 38,"Dirección 38, Arriaga, Chiapas",4.0,1560,16.2371385,-93.8986279
+39,"Arriaga, Chiapas",Nuevo Hotel 39,"Dirección 39, Arriaga, Chiapas",4.9,510,16.2371385,-93.8986279
+40,"Arriaga, Chiapas",Nuevo Hotel 40,"Dirección 40, Arriaga, Chiapas",4.7,904,16.2371385,-93.8986279
+41,"Tuxtla Gutierrez, Chiapas",Nuevo Hotel 41,"Dirección 41, Tuxtla Gutierrez, Chiapas",4.7,894,16.7516009,-93.1029939
+42,"Tuxtla Gutierrez, Chiapas",Nuevo Hotel 42,"Dirección 42, Tuxtla Gutierrez, Chiapas",4.4,839,16.7516009,-93.1029939
+43,"Tuxtla Gutierrez, Chiapas",Nuevo Hotel 43,"Dirección 43, Tuxtla Gutierrez, Chiapas",4.6,1681,16.7516009,-93.1029939
+44,"Tuxtla Gutierrez, Chiapas",Nuevo Hotel 44,"Dirección 44, Tuxtla Gutierrez, Chiapas",4.0,138,16.7516009,-93.1029939
+45,"Tuxtla Gutierrez, Chiapas",Nuevo Hotel 45,"Dirección 45, Tuxtla Gutierrez, Chiapas",4.4,719,16.7516009,-93.1029939
+46,"Tuxtla Gutierrez, Chiapas",Nuevo Hotel 46,"Dirección 46, Tuxtla Gutierrez, Chiapas",4.4,432,16.7516009,-93.1029939
+47,"Tuxtla Gutierrez, Chiapas",Nuevo Hotel 47,"Dirección 47, Tuxtla Gutierrez, Chiapas",4.3,142,16.7516009,-93.1029939
+48,"Tuxtla Gutierrez, Chiapas",Nuevo Hotel 48,"Dirección 48, Tuxtla Gutierrez, Chiapas",4.2,1412,16.7516009,-93.1029939
+49,"Tuxtla Gutierrez, Chiapas",Nuevo Hotel 49,"Dirección 49, Tuxtla Gutierrez, Chiapas",3.9,964,16.7516009,-93.1029939
+50,"Tuxtla Gutierrez, Chiapas",Nuevo Hotel 50,"Dirección 50, Tuxtla Gutierrez, Chiapas",4.7,739,16.7516009,-93.1029939
+51,"Tonalá, Chiapas",Nuevo Hotel 51,"Dirección 51, Tonalá, Chiapas",3.5,899,16.0869461,-93.7612856
+52,"Tonalá, Chiapas",Nuevo Hotel 52,"Dirección 52, Tonalá, Chiapas",3.8,220,16.0869461,-93.7612856
+53,"Tonalá, Chiapas",Nuevo Hotel 53,"Dirección 53, Tonalá, Chiapas",4.7,660,16.0869461,-93.7612856
+54,"Tonalá, Chiapas",Nuevo Hotel 54,"Dirección 54, Tonalá, Chiapas",3.9,820,16.0869461,-93.7612856
+55,"Tonalá, Chiapas",Nuevo Hotel 55,"Dirección 55, Tonalá, Chiapas",3.7,815,16.0869461,-93.7612856
+56,"Tonalá, Chiapas",Nuevo Hotel 56,"Dirección 56, Tonalá, Chiapas",3.6,245,16.0869461,-93.7612856
+57,"Tonalá, Chiapas",Nuevo Hotel 57,"Dirección 57, Tonalá, Chiapas",4.9,1750,16.0869461,-93.7612856
+58,"Tonalá, Chiapas",Nuevo Hotel 58,"Dirección 58, Tonalá, Chiapas",4.9,302,16.0869461,-93.7612856
+59,"Tonalá, Chiapas",Nuevo Hotel 59,"Dirección 59, Tonalá, Chiapas",4.1,614,16.0869461,-93.7612856
+60,"Tonalá, Chiapas",Nuevo Hotel 60,"Dirección 60, Tonalá, Chiapas",3.6,1084,16.0869461,-93.7612856

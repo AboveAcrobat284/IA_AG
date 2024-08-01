@@ -1,0 +1,81 @@
+HotelID,Ciudad,Nombre,Direccion,Valoracion,TotalOpiniones,Lat,Lng
+1,"Tuxtla Gutierrez, Chiapas",Hotel San Miguel,"Av 3a. Sur Pte 510, centro, 29000 Tuxtla Gutiérrez, Chis., Mexico",4.5,1219,16.7516422,-93.1201452
+2,"Tuxtla Gutierrez, Chiapas",Marriott Tuxtla Gutierrez Hotel,"Blvd. Belisario Domínguez 1195, Sin Nombre, Santa Elena, 29060 Tuxtla Gutiérrez, Chis., Mexico",4.5,4538,16.7540924,-93.1435518
+3,"Tuxtla Gutierrez, Chiapas","Palmareca Hotelería ""Siempre Amables""","Blvd. Belisario Domínguez 4120, Jardines de Tuxtla, 29020 Tuxtla Gutiérrez, Chis., Mexico",4.5,2238,16.7566067,-93.152845
+4,"Tuxtla Gutierrez, Chiapas",Casa Nomada,"Av. 3a. Nte. Ote. 172, Zona Sin Asignación de Nombre de Col 42, 29000 Tuxtla Gutiérrez, Chis., Mexico",4.4,72,16.7558832,-93.1151112
+5,"Tuxtla Gutierrez, Chiapas",Auto Hotel Mediterráneo,"Libramiento Sur Oriente, RIbera s/n, Rivera Cerro Hueco, Cerro Hueco, 29094 Tuxtla Gutiérrez, Chis., Mexico",4.0,164,16.732766,-93.0945732
+6,"Tuxtla Gutierrez, Chiapas",Hotel Uke Inn [Xamaipak],"Av. Segunda Sur Pte. 1551, Xamaipak, 29060 Tuxtla Gutiérrez, Chis., Mexico",4.3,669,16.7529012,-93.131194
+7,"Tuxtla Gutierrez, Chiapas",Acacia Hotel,"Blvrd Presa Chicoasén 110, Amp las Palmas, 29040 Tuxtla Gutiérrez, Chis., Mexico",4.6,65,16.7567602,-93.08830789999999
+8,"Tuxtla Gutierrez, Chiapas",Hotel Casablanca,"Av. 2a. Nte. Ote. 251, Estrada, 29000 Tuxtla Gutiérrez, Chis., Mexico",3.7,508,16.755111,-93.114606
+9,"Tuxtla Gutierrez, Chiapas",Hotel La Hacienda,"Blvd. Belisario Domínguez 1197, Residencial Campestre, 29000 Tuxtla Gutiérrez, Chis., Mexico",4.2,665,16.7556724,-93.14202879999999
+10,"Tuxtla Gutierrez, Chiapas",Hotel RS Suites,"Blvrd Presa Chicoasén 815, CFE, 29040 Tuxtla Gutiérrez, Chis., Mexico",4.2,768,16.7565689,-93.0886077
+11,"Tuxtla Gutierrez, Chiapas","Capital O Hotel Aurora, Tuxtla Gutiérrez","Calle Septima Ote. Sur 351, Asamblea de barrio, San Roque, 29000 Tuxtla Gutiérrez, Chis., Mexico",4.3,149,16.7505792,-93.1104455
+12,"Tuxtla Gutierrez, Chiapas",Hotel Casa Del Agua,"Quinta Avenida Nte. Pte. 563, Terán, 29050 Tuxtla Gutiérrez, Chis., Mexico",4.6,229,16.7565439,-93.16625309999999
+13,"Tuxtla Gutierrez, Chiapas",Hotel del Carmen [Tuxtla Gutiérrez],"Av 2a. Sur Pte No. 826, Centro, 29000 Tuxtla Gutiérrez, Chis., Mexico",4.3,1226,16.7530269,-93.1227035
+14,"Tuxtla Gutierrez, Chiapas",Ambar Auto Hotel,"Andrés Serra Rojas 396, Castillo Tielmans, 29070 Tuxtla Gutiérrez, Chis., Mexico",4.4,376,16.744286,-93.08359019999999
+15,"Tuxtla Gutierrez, Chiapas","Holiday Inn Tuxtla Gutierrez, an IHG Hotel","Km. 1081, Blvd. Belisario Domínguez, Sin Nombre, 29020 Tuxtla Gutiérrez, Chis., Mexico",4.6,4605,16.7547262,-93.15125599999999
+16,"Tuxtla Gutierrez, Chiapas",Andiroba Palace [Hotel],"Blvd. Ángel Albino Corzo 1239, Las Palmas, 29040 Tuxtla Gutiérrez, Chis., Mexico",4.3,814,16.749368,-93.09098709999999
+17,"Tuxtla Gutierrez, Chiapas",Hotel Don Cándido,"Av. 5a. Sur Ote. 142, Asamblea de barrio, Centro, 29000 Tuxtla Gutiérrez, Chis., Mexico",3.7,185,16.7492886,-93.11649279999999
+18,"Tuxtla Gutierrez, Chiapas","Hotel ""Madrid""","Sexta Pte. Nte. 175, Guadalupe, 29000 Tuxtla Gutiérrez, Chis., Mexico",4.4,769,16.7552365,-93.12124709999999
+19,"Tuxtla Gutierrez, Chiapas",Diverxo Hotel y Villas,"Perif. Sur Pte. 2255, Penipak, 29060 Tuxtla Gutiérrez, Chis., Mexico",4.6,1031,16.749872,-93.13894499999999
+20,"Tuxtla Gutierrez, Chiapas",Hotel Vista Inn Premium,"Calle 16A. Pte. Nte. 570, Moctezuma, 29030 Tuxtla Gutiérrez, Chis., Mexico",4.3,993,16.7605771,-93.1309601
+21,"San Cristobal De las Casas, Chiapas",HOTEL RINCON DE CUCA,"C. Ejército Nacional, Barrio del Cerrillo, 29220 San Cristóbal de las Casas, Chis., Mexico",4.6,275,16.7395678,-92.6365124
+22,"San Cristobal De las Casas, Chiapas",Hotel Tierra Maya,"Av. la Almolonga 28, Sta Lucia, 29250 San Cristóbal de las Casas, Chis., Mexico",4.5,179,16.735091,-92.630602
+23,"San Cristobal De las Casas, Chiapas",Hotel Hacienda Don Juan,"Prolongacion Insurgentes 162, María Auxiliadora, 29290 San Cristóbal de las Casas, Chis., Mexico",4.5,580,16.713096,-92.6335551
+24,"San Cristobal De las Casas, Chiapas",Jardines de Luz,"Av Insurgentes 32, Sta Lucia, 29250 San Cristóbal de las Casas, Chis., Mexico",3.9,716,16.7316927,-92.6369814
+25,"San Cristobal De las Casas, Chiapas",Hotel Barrio Antiguo San Cristóbal,"Belisario Domínguez 27, El Cerrillo, 29220 San Cristóbal de las Casas, Chis., Mexico",4.3,292,16.7396706,-92.6354308
+26,"San Cristobal De las Casas, Chiapas",Hoteles Villa Mercedes San Cristobal,"Diagonal Hermanos Paniagua 32, Barrio de Fatima, 29264 San Cristóbal de las Casas, Chis., Mexico",4.5,1238,16.732493,-92.6539961
+27,"San Cristobal De las Casas, Chiapas",Hotel San Luis,"Calle Diego de Mazariegos 51, Barrio de la Merced, 29240 San Cristóbal de las Casas, Chis., Mexico",4.3,384,16.7363646,-92.64252309999999
+28,"San Cristobal De las Casas, Chiapas",Hotel Parador Margarita,"Calle Dr. José Felipe Flores 39, Sta Lucia, 29250 San Cristóbal de las Casas, Chis., Mexico",4.6,676,16.7361345,-92.63363059999999
+29,"San Cristobal De las Casas, Chiapas",Hotel Boutique Rosario,"Av Insurgentes 18-A, Centro Historico, 29240 San Cristóbal de las Casas, Chis., Mexico",4.3,480,16.7354767,-92.6369783
+30,"San Cristobal De las Casas, Chiapas",Posada del Abuelito (Hostel),"C. Tapachula 18, Barrio el Cerrillo, 29220 San Cristóbal de las Casas, Chis., Mexico",4.7,412,16.7409442,-92.6316635
+31,"San Cristobal De las Casas, Chiapas","OYO Hotel Punta Guadalupe, San Cristóbal de las Casas","C. María Adelina Flores 52, Barrio de Guadalupe, 29230 San Cristóbal de las Casas, Chis., Mexico",3.3,69,16.7384763,-92.6321579
+32,"San Cristobal De las Casas, Chiapas",Hostal La Casa de Paco,"Calle Diego de Mazariegos 80, Barrio de la Merced, 29280 San Cristóbal de las Casas, Chis., Mexico",4.5,197,16.7360728,-92.6454631
+33,"San Cristobal De las Casas, Chiapas",Hotel Suites del Barrio,"5 de Mayo 71-A, Barrio de Mexicanos, 29240 San Cristóbal de las Casas, Chis., Mexico",4.8,44,16.7424718,-92.63988529999999
+34,"San Cristobal De las Casas, Chiapas",Mision Grand San Cristobal de las Casas,"Francisco I. Madero 19, Centro Historico, 29200 San Cristóbal de las Casas, Chis., Mexico",4.5,491,16.7365846,-92.63581699999999
+35,"San Cristobal De las Casas, Chiapas",Hotel Rocaval,"Calzada México no. 5, Barrio de Fatima, 29264 San Cristóbal de las Casas, Chis., Mexico",4.6,351,16.7320442,-92.65261
+36,"San Cristobal De las Casas, Chiapas",NEUTRO Alojamiento tipo hotel (info solo msj whatsapp),"Real de Guadalupe 87, Barrio de Guadalupe, 29230 San Cristóbal de las Casas, Chis., Mexico",4.6,32,16.7377587,-92.6315565
+37,"San Cristobal De las Casas, Chiapas",CASA DON PEDRO FARO,"Periodista Isauro Rossete 30, Barrio de la Merced, 29240 San Cristóbal de las Casas, Chis., Mexico",4.9,110,16.7356568,-92.6419885
+38,"San Cristobal De las Casas, Chiapas",Hotel Bo,"5 de Mayo 38, Barrio de Mexicanos, 29240 San Cristóbal de las Casas, Chis., Mexico",4.7,787,16.7405388,-92.64002049999999
+39,"San Cristobal De las Casas, Chiapas",Hotel Real Del Valle,"Real de Guadalupe 14, Zona Centro, 29200 San Cristóbal de las Casas, Chis., Mexico",4.2,406,16.7374945,-92.6366106
+40,"San Cristobal De las Casas, Chiapas",Hotel Misión Colonial San Cristóbal,"Calle Diego de Mazariegos 47, Barrio de la Merced, 29240 San Cristóbal de las Casas, Chis., Mexico",4.4,750,16.7363334,-92.642246
+41,"Arriaga, Chiapas",Hotel Ik Lumal,"Centro, Arriaga,Mexico, Primera Calle Nte. 7, Centro, Capricho, 30450 Arriaga, Chis., Mexico",4.2,591,16.2359404,-93.89827969999999
+42,"Arriaga, Chiapas",Casa Blanca,"Segunda Avenida Ote., Centro, Capricho, 30450 Arriaga, Chis., Mexico",4.1,481,16.23624749999999,-93.8981003
+43,"Arriaga, Chiapas",Hotel Don Quijote Arriaga,"Boulevard Francisco Sarabia y 26 Av. Oriente 2491, Nueva Esperanza, 30450 Arriaga, Chis., Mexico",4.3,34,16.2419042,-93.8870199
+44,"Arriaga, Chiapas",HOTEL IO,"1a. Sur 10, Centro, Los Laureles, 30450 Arriaga, Chis., Mexico",3.8,215,16.233589,-93.900521
+45,"Arriaga, Chiapas",Maria Eugenia Hotel Restaurant,"Carretera Panaméricana Km 45, Carretera Panaméricana Km 45, Ejidal, 30453 Arriaga, Chis., Mexico",3.7,134,16.2293237,-93.9107066
+46,"Arriaga, Chiapas",Hotel Panamericano,"Avenida Cuarta Oriente 9, Centro, Capricho, 30450 Arriaga, Chis., Mexico",3.8,53,16.2359414,-93.8972952
+47,"Arriaga, Chiapas","HOTEL ""CASA DEL REY""","Frente a CocaCola, Francisco Sarabia 801, Buenos Aires II, 30453 Arriaga, Chis., Mexico",4.3,113,16.2391087,-93.8890078
+48,"Arriaga, Chiapas",Hotel Chiapas,"Calle Tercera Ote. Sur 7, Centro, 30450 Arriaga, Chis., Mexico",4.4,178,16.2332335,-93.8991186
+49,"Arriaga, Chiapas",HOTEL ECOLOGY INN,"Carretera Arriaga Tapanatepec km 42.5 S/N, Nueva Sta Rosa, 30453 Arriaga, Chis., Mexico",4.1,62,16.2266103,-93.9193157
+50,"Arriaga, Chiapas",Hotel Parador,"Costera 4, Barbasco, 30700 Arriaga, Chis., Mexico",3.8,218,16.2372361,-93.88309960000001
+51,"Arriaga, Chiapas",Hospedaje Arriaga,"Ferrocarril, Centro, Capricho, 30450 Arriaga, Chis., Mexico",4.4,8,16.2342367,-93.89712519999999
+52,"Arriaga, Chiapas",Hotel Frailes,"3 Avenida Prolongacion Sexta Oriente Central Norte 13, Centro, Hollywood 30450, Vista Hermosa, Capricho, 30700 Arriaga, Chis., Mexico",3.7,44,16.2377543,-93.8978952
+53,"Arriaga, Chiapas",Hotel America con Tienda el amgiazo 24 hrs,"tapachula, Juchitán de Zaragoza - Tapachula, Buenos Aires II, 30450 Arriaga, Chis., Mexico",4.3,65,16.2404281,-93.8879044
+54,"Arriaga, Chiapas",Hospedaje Girasol,"30450, Tercera Avenida Ote. 19, Las Almendritas, 30453 Arriaga, Chis., Mexico",3.2,23,16.23129,-93.8986738
+55,"Arriaga, Chiapas",Hospedaje C&R,"Anaya 6, San Sebastián Río Grande, 30500 Tonalá, Chis., Mexico",3.6,16,16.0903972,-93.7423341
+56,"Arriaga, Chiapas",Hotel Lupita,"Tercera Calle Nte. 30, Centro, Capricho, 30450 Arriaga, Chis., Mexico",0.0,0,16.2344248,-93.897852
+57,"Arriaga, Chiapas",Hotel Pineda Real,"Zaragoza 100, Nuevo, 30500 Tonalá, Chis., Mexico",4.3,242,16.0886132,-93.75598509999999
+58,"Arriaga, Chiapas",Auto Hotel Caribou,"30456 Arriaga, Chis., Mexico",3.8,35,16.2196214,-93.86444069999999
+59,"Arriaga, Chiapas",Motel Las Palmas,"Carretera Arriaga Punta Flor, Barrio Las Mercedes, 30453 Arriaga, Chis., Mexico",4.3,14,16.2380022,-93.8838219
+60,"Arriaga, Chiapas",Hotel Garden Suites Tonalá Chiapas,"Av. Miguel Vasallo S/N, San Ramón, 30500 Tonalá, Chis., Mexico",4.2,384,16.101699,-93.766195
+61,"Tonalá, Chiapas",Hotel Garden Suites Tonalá Chiapas,"Av. Miguel Vasallo S/N, San Ramón, 30500 Tonalá, Chis., Mexico",4.2,384,16.101699,-93.766195
+62,"Tonalá, Chiapas",Hotel Pineda Real,"Zaragoza 100, Nuevo, 30500 Tonalá, Chis., Mexico",4.3,242,16.0886132,-93.75598509999999
+63,"Tonalá, Chiapas",Hotel Tonala,"Av Hidalgo 172, Las Ánimas, 30500 Tonalá, Chis., Mexico",3.7,269,16.0923716,-93.7552789
+64,"Tonalá, Chiapas",Hotel Puerta Del Sol,"Av Hidalgo 300, Del Valle, 30500 Tonalá, Chis., Mexico",4.0,704,16.0983209,-93.76647320000001
+65,"Tonalá, Chiapas",Hotel quetzal,"Avenida churubusco y calle, Juan José Calzada 15, Nuevo Milenio, 30500 Tonalá, Chis., Mexico",4.4,308,16.0884039,-93.7687236
+66,"Tonalá, Chiapas",Hotel Villa del Mar,"C. Francisco I. Madero 189, San Francisco, 30500 Tonalá, Chis., Mexico",3.9,127,16.0829893,-93.7590318
+67,"Tonalá, Chiapas",Hotel Central Parq,"21 de Marzo 108, Las Ánimas, 30500 Tonalá, Chis., Mexico",3.5,121,16.0924682,-93.75253289999999
+68,"Tonalá, Chiapas",Hotel Galilea,"Frente al Parque Central, 5 de Febrero entre Av Hidalgo y Av Rayón, Colonia Centro, 30500 Tonalá, Chis., Mexico",3.9,170,16.0911012,-93.7514027
+69,"Tonalá, Chiapas",Hospedaje C&R,"Anaya 6, San Sebastián Río Grande, 30500 Tonalá, Chis., Mexico",3.6,16,16.0903972,-93.7423341
+70,"Tonalá, Chiapas",Hotel Farro,"C. 16 de Septiembre 60, Nicatán, 30500 Tonalá, Chis., Mexico",3.9,88,16.0905733,-93.7525388
+71,"Tonalá, Chiapas",Hotel Princesa,"5 de Febrero, Nicatán, 30500 Tonalá, Chis., Mexico",4.2,192,16.0869888,-93.75439209999999
+72,"Tonalá, Chiapas",Hotel Marista,"Av Hidalgo 211, Nuevo, 30500 Tonalá, Chis., Mexico",3.8,11,16.093021,-93.7581147
+73,"Tonalá, Chiapas",Hotel Santa Cecilia,"El Bosque, 30500 Tonalá, Chis., Mexico",4.3,34,16.0938031,-93.7587867
+74,"Tonalá, Chiapas",Hotel Rincón del Valle,"30500, Valle de México 10, El Valle, 30500 Tonalá, Chis., Mexico",3.4,13,16.0994455,-93.7658247
+75,"Tonalá, Chiapas",REYEES SUITE,"Dr. Antonio Castro Zambrano 14, Las Ánimas, 30500 Tonalá, Chis., Mexico",4.3,21,16.0929034,-93.75281969999999
+76,"Tonalá, Chiapas",CASA MANGATA,"Blvd. Mariano Matamoros entre 8 PTE Y 9 PTE, 30507 Puerto Arista, Chis., Mexico",4.4,67,15.9371885,-93.81678289999999
+77,"Tonalá, Chiapas",Posada Don Quijote,"Av Hidalgo 305, Nuevo, 30500 Tonalá, Chis., Mexico",4.1,39,16.0985883,-93.7682452
+78,"Tonalá, Chiapas",Hotel Tonalá,"C. Francisco I. Madero #22, Tonalá Centro, 45400 Tonalá, Jal., Mexico",4.2,421,20.6236243,-103.2428802
+79,"Tonalá, Chiapas",Hostal HP,"Avenida Juárez, 5 de Mayo, Nicatán, 30500 Tonalá, Chis., Mexico",4.3,12,16.0886255,-93.7510978
+80,"Tonalá, Chiapas",Hotel Thomas,"Av Hidalgo, Nicatán, 30500 Tonalá, Chis., Mexico",0.0,0,16.08966999999999,-93.7493732

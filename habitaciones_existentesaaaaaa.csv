@@ -1,0 +1,201 @@
+HotelID,HabitacionID,Precio,TipoServicio
+1,H1_1,1939.02,Habitación individual
+1,H1_2,2387.07,Habitación de doble cama
+1,H1_3,3613.08,Habitación con Jacuzzi
+1,H1_4,4654.47,Habitación de doble cama
+1,H1_5,1491.15,Habitación individual
+1,H1_6,1965.95,Habitación de doble cama
+1,H1_7,2465.3,Habitación con Jacuzzi
+1,H1_8,2223.64,Habitación de doble cama
+1,H1_9,2492.27,Habitación de doble cama
+1,H1_10,3566.67,Habitación con Jacuzzi
+2,H2_1,1780.1,Habitación con Jacuzzi
+2,H2_2,4466.93,Habitación con Jacuzzi
+2,H2_3,1114.68,Habitación individual
+2,H2_4,1866.07,Habitación de doble cama
+2,H2_5,2869.93,Habitación individual
+2,H2_6,4766.97,Habitación de doble cama
+2,H2_7,3460.73,Habitación con Jacuzzi
+2,H2_8,3657.74,Habitación con Jacuzzi
+2,H2_9,1361.25,Habitación de doble cama
+2,H2_10,4282.06,Habitación con Jacuzzi
+3,H3_1,1965.32,Habitación individual
+3,H3_2,1366.49,Habitación con Jacuzzi
+3,H3_3,3812.2,Habitación individual
+3,H3_4,4841.06,Habitación con Jacuzzi
+3,H3_5,1345.33,Habitación con Jacuzzi
+3,H3_6,4038.85,Habitación de doble cama
+3,H3_7,1698.55,Habitación de doble cama
+3,H3_8,2527.03,Habitación de doble cama
+3,H3_9,2501.28,Habitación de doble cama
+3,H3_10,1419.37,Habitación con Jacuzzi
+4,H4_1,3916.01,Habitación de doble cama
+4,H4_2,3495.99,Habitación de doble cama
+4,H4_3,2857.06,Habitación de doble cama
+4,H4_4,1438.55,Habitación de doble cama
+4,H4_5,4012.65,Habitación de doble cama
+4,H4_6,4336.09,Habitación con Jacuzzi
+4,H4_7,3366.97,Habitación con Jacuzzi
+4,H4_8,4599.14,Habitación individual
+4,H4_9,1729.01,Habitación con Jacuzzi
+4,H4_10,3186.98,Habitación de doble cama
+5,H5_1,4129.01,Habitación con Jacuzzi
+5,H5_2,2972.19,Habitación individual
+5,H5_3,3829.11,Habitación individual
+5,H5_4,2190.23,Habitación con Jacuzzi
+5,H5_5,3631.41,Habitación con Jacuzzi
+5,H5_6,2390.54,Habitación de doble cama
+5,H5_7,3575.22,Habitación de doble cama
+5,H5_8,4857.36,Habitación de doble cama
+5,H5_9,940.21,Habitación con Jacuzzi
+5,H5_10,2344.09,Habitación de doble cama
+6,H6_1,4129.25,Habitación de doble cama
+6,H6_2,4156.14,Habitación con Jacuzzi
+6,H6_3,2562.51,Habitación con Jacuzzi
+6,H6_4,4404.08,Habitación individual
+6,H6_5,1281.5,Habitación de doble cama
+6,H6_6,1053.24,Habitación con Jacuzzi
+6,H6_7,3513.83,Habitación individual
+6,H6_8,1537.76,Habitación individual
+6,H6_9,4623.97,Habitación de doble cama
+6,H6_10,1708.17,Habitación de doble cama
+7,H7_1,4093.53,Habitación de doble cama
+7,H7_2,2722.01,Habitación individual
+7,H7_3,2744.0,Habitación individual
+7,H7_4,2091.26,Habitación individual
+7,H7_5,1249.29,Habitación con Jacuzzi
+7,H7_6,3050.6,Habitación con Jacuzzi
+7,H7_7,3676.99,Habitación individual
+7,H7_8,2487.12,Habitación con Jacuzzi
+7,H7_9,2220.97,Habitación con Jacuzzi
+7,H7_10,4717.98,Habitación individual
+8,H8_1,1094.47,Habitación de doble cama
+8,H8_2,2475.03,Habitación con Jacuzzi
+8,H8_3,4054.35,Habitación con Jacuzzi
+8,H8_4,594.71,Habitación de doble cama
+8,H8_5,3512.43,Habitación individual
+8,H8_6,571.14,Habitación de doble cama
+8,H8_7,4004.59,Habitación individual
+8,H8_8,1008.99,Habitación con Jacuzzi
+8,H8_9,4913.23,Habitación individual
+8,H8_10,4284.58,Habitación individual
+9,H9_1,1363.81,Habitación de doble cama
+9,H9_2,3538.42,Habitación con Jacuzzi
+9,H9_3,3970.13,Habitación con Jacuzzi
+9,H9_4,3715.29,Habitación individual
+9,H9_5,1259.86,Habitación con Jacuzzi
+9,H9_6,3305.28,Habitación individual
+9,H9_7,4759.42,Habitación individual
+9,H9_8,4462.99,Habitación con Jacuzzi
+9,H9_9,2487.68,Habitación de doble cama
+9,H9_10,1562.15,Habitación con Jacuzzi
+10,H10_1,4485.54,Habitación de doble cama
+10,H10_2,4026.17,Habitación con Jacuzzi
+10,H10_3,634.4,Habitación con Jacuzzi
+10,H10_4,3411.27,Habitación de doble cama
+10,H10_5,3765.23,Habitación con Jacuzzi
+10,H10_6,1825.18,Habitación con Jacuzzi
+10,H10_7,1655.31,Habitación individual
+10,H10_8,2273.21,Habitación con Jacuzzi
+10,H10_9,4476.82,Habitación de doble cama
+10,H10_10,3181.34,Habitación con Jacuzzi
+11,H11_1,1741.05,Habitación de doble cama
+11,H11_2,3126.92,Habitación individual
+11,H11_3,1763.39,Habitación de doble cama
+11,H11_4,1506.74,Habitación con Jacuzzi
+11,H11_5,3135.89,Habitación con Jacuzzi
+11,H11_6,3616.72,Habitación de doble cama
+11,H11_7,927.77,Habitación con Jacuzzi
+11,H11_8,1524.47,Habitación individual
+11,H11_9,4343.99,Habitación de doble cama
+11,H11_10,3477.88,Habitación de doble cama
+12,H12_1,793.71,Habitación individual
+12,H12_2,3344.94,Habitación con Jacuzzi
+12,H12_3,3174.66,Habitación de doble cama
+12,H12_4,809.28,Habitación individual
+12,H12_5,958.85,Habitación individual
+12,H12_6,2571.3,Habitación de doble cama
+12,H12_7,4268.56,Habitación de doble cama
+12,H12_8,4175.12,Habitación individual
+12,H12_9,748.85,Habitación de doble cama
+12,H12_10,3473.38,Habitación de doble cama
+13,H13_1,1406.13,Habitación con Jacuzzi
+13,H13_2,3462.96,Habitación individual
+13,H13_3,3098.1,Habitación de doble cama
+13,H13_4,2561.52,Habitación individual
+13,H13_5,3837.26,Habitación de doble cama
+13,H13_6,4140.2,Habitación con Jacuzzi
+13,H13_7,641.09,Habitación individual
+13,H13_8,4931.64,Habitación de doble cama
+13,H13_9,4231.2,Habitación individual
+13,H13_10,1984.33,Habitación individual
+14,H14_1,1709.79,Habitación de doble cama
+14,H14_2,941.84,Habitación individual
+14,H14_3,560.46,Habitación con Jacuzzi
+14,H14_4,3174.44,Habitación de doble cama
+14,H14_5,1746.44,Habitación individual
+14,H14_6,3066.2,Habitación de doble cama
+14,H14_7,4230.39,Habitación con Jacuzzi
+14,H14_8,4450.61,Habitación individual
+14,H14_9,1206.77,Habitación de doble cama
+14,H14_10,4776.8,Habitación de doble cama
+15,H15_1,3849.8,Habitación individual
+15,H15_2,1905.36,Habitación con Jacuzzi
+15,H15_3,4821.86,Habitación de doble cama
+15,H15_4,1608.45,Habitación de doble cama
+15,H15_5,1313.78,Habitación individual
+15,H15_6,2873.83,Habitación individual
+15,H15_7,1333.9,Habitación de doble cama
+15,H15_8,3799.87,Habitación con Jacuzzi
+15,H15_9,3167.24,Habitación individual
+15,H15_10,3055.49,Habitación de doble cama
+16,H16_1,540.19,Habitación individual
+16,H16_2,3996.32,Habitación de doble cama
+16,H16_3,605.74,Habitación con Jacuzzi
+16,H16_4,2333.1,Habitación individual
+16,H16_5,3015.19,Habitación individual
+16,H16_6,1002.46,Habitación con Jacuzzi
+16,H16_7,710.96,Habitación individual
+16,H16_8,2838.76,Habitación de doble cama
+16,H16_9,2591.21,Habitación de doble cama
+16,H16_10,3889.78,Habitación de doble cama
+17,H17_1,4300.15,Habitación de doble cama
+17,H17_2,3696.33,Habitación con Jacuzzi
+17,H17_3,1057.11,Habitación de doble cama
+17,H17_4,3181.87,Habitación de doble cama
+17,H17_5,1979.95,Habitación con Jacuzzi
+17,H17_6,4818.51,Habitación con Jacuzzi
+17,H17_7,1928.32,Habitación individual
+17,H17_8,2470.15,Habitación individual
+17,H17_9,4554.06,Habitación individual
+17,H17_10,3622.26,Habitación individual
+18,H18_1,3907.64,Habitación con Jacuzzi
+18,H18_2,4965.51,Habitación con Jacuzzi
+18,H18_3,2918.75,Habitación individual
+18,H18_4,3099.88,Habitación de doble cama
+18,H18_5,1478.9,Habitación de doble cama
+18,H18_6,3786.04,Habitación de doble cama
+18,H18_7,4487.0,Habitación con Jacuzzi
+18,H18_8,1366.17,Habitación con Jacuzzi
+18,H18_9,4662.16,Habitación con Jacuzzi
+18,H18_10,810.49,Habitación con Jacuzzi
+19,H19_1,637.23,Habitación de doble cama
+19,H19_2,4794.03,Habitación de doble cama
+19,H19_3,3736.43,Habitación de doble cama
+19,H19_4,2373.99,Habitación de doble cama
+19,H19_5,4805.51,Habitación con Jacuzzi
+19,H19_6,1587.77,Habitación de doble cama
+19,H19_7,3162.27,Habitación de doble cama
+19,H19_8,4549.66,Habitación individual
+19,H19_9,4523.82,Habitación con Jacuzzi
+19,H19_10,2421.04,Habitación de doble cama
+20,H20_1,1340.05,Habitación de doble cama
+20,H20_2,1373.69,Habitación con Jacuzzi
+20,H20_3,1793.05,Habitación con Jacuzzi
+20,H20_4,4208.21,Habitación con Jacuzzi
+20,H20_5,2781.88,Habitación individual
+20,H20_6,1847.39,Habitación de doble cama
+20,H20_7,4109.27,Habitación individual
+20,H20_8,3196.75,Habitación con Jacuzzi
+20,H20_9,2245.69,Habitación individual
+20,H20_10,682.49,Habitación individual
